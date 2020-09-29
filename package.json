@@ -1,7 +1,7 @@
 {
-  "name": "npm-package-template",
-  "version": "1.0.0",
-  "description": "",
+  "name": "mongo-docker",
+  "version": "1.0.0-beta.1",
+  "description": "A light-weight package to run mongo commands in a docker instance.",
   "main": "src/index.js",
   "types": "types.d.ts",
   "devDependencies": {
@@ -15,19 +15,19 @@
     "lint-staged": "^10.0.8"
   },
   "scripts": {
-    "test": "jest src/*.test.js",
+    "test": "jest",
     "lint": "eslint \"**/*.js\" \"**/*.json\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/joeyjiron06/npm-package-template.git"
+    "url": "git+https://github.com/joeyjiron06/mongo-docker.git"
   },
   "author": "Joey Jiron <joeyjiron06@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/joeyjiron06/npm-package-template/issues"
+    "url": "https://github.com/joeyjiron06/mongo-docker/issues"
   },
-  "homepage": "https://github.com/joeyjiron06/npm-package-template#readme",
+  "homepage": "https://github.com/joeyjiron06/mongo-docker#readme",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
@@ -36,5 +36,9 @@
   },
   "lint-staged": {
     "*.js(on)": "npm run lint -- --fix"
+  },
+  "dependencies": {
+    "execa": "^4.0.3",
+    "poll-until-promise": "^3.4.0"
   }
 }
